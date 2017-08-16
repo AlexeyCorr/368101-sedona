@@ -13,7 +13,7 @@
           <ul class="manu__list">
             <li class="memu__item">
               <a class="menu__link">
-              <img src="img/logo.png" width="138" height="70" alt="Логотип «Sedona»">
+              <img src="img/logo-menu.png" width="138" height="70" alt="Логотип «Sedona»">
               </a>
             </li>
             <li class="memu__item"><a class="menu__link" href="#">Информация</a></li>
@@ -28,11 +28,11 @@
     <main class="container">
       <section class="slogan">
         <h1 class="visually-hidden">Седона</h1>
-        <img src="img/slogan.svg" width="458" height="352" alt="«Sedona»">
+        <img src="img/logo-intro.png" width="458" height="352" alt="«Sedona»">
       </section>
 
       <div class="description">
-        <h2 class="description__title">Седона — небольшой городок в Аризоне,
+        <h2 class="title title--height">Седона — небольшой городок в Аризоне,
           заслуживающий большего!</h2>
         <p class="description__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </div>
@@ -41,7 +41,7 @@
         <h2 class="visually-hidden">Преимущества Седоны</h2>
         <div class="advantage">
           <div class="advantage__text">
-            <h3 class="advantage__title">Настоящий городок</h3>
+            <h3 class="title title--white">Настоящий городок</h3>
             <p>- №1 -</p>
             <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
           </div>
@@ -72,7 +72,7 @@
             <img src="img/feature-image2.jpg" width="800" height="400" alt="Настоящий городок">
           </div>
           <div class="advantage__text">
-            <h3 class="advantage__title">Там есть мост дьявола</h3>
+            <h3 class="title title--white">Там есть<br> мост дьявола</h3>
             <p>- №2 -</p>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
@@ -101,55 +101,62 @@
       <section class="search">
         <h2 class="visually-hidden">Поиск гостиницы</h2>
         <b>Заинтересовались?</b>
-        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <a class="button" href="#">Поиск гостиницы в Седоне</a>
       </section>
 
       <section class="map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
+        <img src="img/map.jpg" width="1200" height="593" alt="Карта">
       </section>
 
     </main>
+    <div class="container">
+      <footer class="page-footer">
 
-    <footer class="page-footer">
+        <div class="footer__teg">
+          <b class="title title--height">#visitsedona</b>
+        </div>
 
-      <div class="footer__teg">
-        <b>#visitsedona</b>
-      </div>
+        <div class="footer__social">
+          <a class="social__button social__button--tw" href="#">Твиттер</a>
+          <a class="social__button social__button--fb" href="#">Файсбук</a>
+          <a class="social__button social__button--yt" href="#">Ютуб</a>
+        </div>
 
-      <div class="footer__social">
-        <a class="social__button social__button--tw" href="#">Твиттер</a>
-        <a class="social__button social__button--fb" href="#">Файсбук</a>
-        <a class="social__button social__button--yt" href="#">Ютуб</a>
-      </div>
+        <div class="footer__copyright">
+          <p>website by</p>
+          <img src="img/logo-copyright.svg" width="115" height="41" alt="Логотип автора">
+        </div>
 
-      <div class="footer__copyright">
-        <p>website by</p>
-        <img src="img/copyright.svg" width="115" height="41" alt="Логотип автора">
-      </div>
-
-    </footer>
+      </footer>
+    </div>
 
     <section class="popup">
       <h2 class="visually-hidden">Поиск гостиницы</h2>
-      <form class="popup__form">
-        <p>
-          Дата заезда:
-          <input type="text" name="date-in" placeholder="24 апреля 2017">
-        </p>
-        <p>
-          Дата выезда:
-          <input type="text" name="date-out" placeholder="4 июля 2017">
-        </p>
-        <p>
-          Взрослые:
-          <input type="text" name="adult" placeholder="2">
-        </p>
-        <p>
-          Дети:
-          <input type="text" name="children" placeholder="0">
-        </p>
-        <button class="button" type="submit">Найти</button>
+      <form class="popup-form">
+        <div class="popup-form__row">
+          <label class="popup-form__label" for="date-in">Дата заезда:</label>
+          <input class="popup-form__field" type="text" name="date-in" placeholder="24 апреля 2017" id="date-in">
+          <button type="button" class="popup-form__calendar">Календарь</button>
+          <label class="popup-form__label" for="date-out">Дата выезда:</label>
+          <input class="popup-form__field" type="text" name="date-out" placeholder="4 июля 2017" id="date-out">
+          <button type="button" class="popup-form__calendar">Календарь</button>
+        </div>
+        <div class="popup-form__col">
+          <label class="popup-form__label" for="adult">Взрослые:</label>
+            <div class="number">
+              <button class="number__btn namber__btn--minus">Минус</button>
+              <input class="number__fiald" type="text" id="adult" placeholder="2">
+              <button class="number__btn namber__btn--plus">Плюс</button>
+            </div>
+            <label class="popup-form__label" for="child">Дети:</label>
+              <div class="number">
+                <button class="number__btn namber__btn--minus">Минус</button>
+                <input class="number__fiald" type="text" id="child" placeholder="0">
+                <button class="number__btn namber__btn--plus">Плюс</button>
+              </div>
+          <button class="button" type="submit">Найти</button>
       </form>
     </section>
 

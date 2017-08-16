@@ -13,7 +13,7 @@
           <ul class="manu__list">
             <li class="memu__item">
               <a class="menu__link" href="index.html">
-              <img src="img/logo.png" width="138" height="70" alt="Логотип «Sedona»">
+              <img src="img/logo-menu.png" width="138" height="70" alt="Логотип «Sedona»">
               </a>
             </li>
             <li class="memu__item"><a class="menu__link" href="#">Информация</a></li>
@@ -27,56 +27,66 @@
 
     <main class="conteiner">
 
-      <section class="filters">
-        <h2 class="visually-hidden">Фильтры товаров</h2>
+      <section class="filter">
+        <h2 class="visually-hidden">Фильтры услуг</h2>
 
-        <form class="filter" method="get" action="#" oninput="maxoutput.value=cost.value">
+        <form method="get" action="#">
 
-          <fieldset>
+          <fieldset class="filter__col">
             <legend>Инфраструктура:</legend>
             <ul class="filter__list">
               <li class="filter__item">
-                <input class="visually-hidden filter__input" type="checkbox" name="pool" checked>
-                Бассейн
+                <input class="visually-hidden filter__field" type="checkbox" name="pool" id="pool" checked>
+                <label class="filter__label" for="pool">Бассейн</label>
               </li>
               <li class="filter__item">
-                <input class="visually-hidden filter__input" type="checkbox" name="parcing">
-                Парковка
+                <input class="visually-hidden filter__input" type="checkbox" name="parcing" id="parcing">
+                <label class="filter__label" for="parcing">Парковка</label>
               </li>
               <li class="filter__item">
-                <input class="visually-hidden filter__input" type="checkbox" name="Wi-Fi">
-                Wi-Fi
+                <input class="visually-hidden filter__input" type="checkbox" name="Wi-Fi" id="wi-fi">
+                <label class="filter__label" for="wi-fi">Wi-Fi</label>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="filter__col">
             <legend>Тип жилья:</legend>
             <ul class="filter__list">
               <li class="filter__item">
-                <input class="visually-hidden filter__input" type="checkbox" name="hotel" checked>
-                Гостиница
+                <input class="visually-hidden filter__input" type="checkbox" name="hotel" id="hotel" checked>
+                <label class="filter__label" for="hotel">Гостиница</label>
               </li>
               <li class="filter__item">
-                <input class="visually-hidden filter__input" type="checkbox" name="motel" checked>
-                Мотель
+                <input class="visually-hidden filter__input" type="checkbox" name="motel" id="motel" checked>
+                <label class="filter__label" for="motel">Мотель</label>
               </li>
               <li class="filter__item">
-                <input class="visually-hidden filter__input" type="checkbox" name="apartments" checked>
-                Апартаменты
+                <input class="visually-hidden filter__input" type="checkbox" name="apartments" id="apartment" checked>
+                <label class="filter__label" for="apartment">Апартаменты</label>
               </li>
             </ul>
           </fieldset>
 
           <fieldset>
-            <!--с этим возникли сложности-->
-            <legend>Стоимость в сутки (Р):</legend>
-            <output name="minoutput">0</output>
-            <output name="maxoutput">3000</output>
+            <legend>Стоимость в сутки (р):</legend>
             <div class="range">
-              <input type="range" min="0" max="4000" step="100" data-values="0, 3000" id="cost">
+              <div class="range__fields">
+                <div class="range__field">
+                  <label for="from">От</label>
+                  <input type="text" name="field-from" id="from" placeholder="0">
+                </div>
+                <div class="range__field">
+                  <label for="to">До</label>
+                  <input type="text" name="field-to" id="to" placeholder="3000">
+                </div>
+                <div class="range__bar">
+                  <button class="range__btn" type="button">От</button>
+                  <div class="range__scale">Шкала</div>
+                  <button class="range__btn" type="button">До</button>
+                </div>
+              </div>
             </div>
-            <button class="button" type="submit">Найдено</button>
           </fieldset>
 
         </form>
@@ -87,40 +97,38 @@
         <h2 class="visually-hidden">Сортировка отелей</h2>
         <form class="sorting__form" method="get" action="#">
           <fieldset class="sorting__title">
-            <legend class="title">Найдено:</legend>
+            <legend class="title title--height">Найдено: 3</legend>
           </fieldset>
           <fieldset class="sorting__type">
             <legend>Сортировка:</legend>
             <ul class="sorting__list">
               <li class="sorting__item">
-                <label>
-                  <input type="radio" name="filter-item" class="visually-hidden" checked>
-                  По цене
-                </label>
+                <input type="radio" name="filter-item" class="visually-hidden" id="cost" checked>
+                <label class="sorting__label" for="cost">По цене</label>
               </li>
               <li class="sorting__item">
-                <label>
-                  <input type="radio" name="filter-item" class="visually-hidden">
-                  По типу
-                </label>
+                <input type="radio" name="filter-item" class="visually-hidden" id="type">
+                <label class="sorting__label" for="type">По типу</label>
               </li>
               <li class="sorting__item">
-                <label>
-                  <input type="radio" name="filter-item" class="visually-hidden">
-                  По рейтингу
-                </label>
+                <input type="radio" name="filter-item" class="visually-hidden" id="rating">
+                <label class="sorting__label" for="rating">По рейтингу</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="sorting__change">
             <ul>
               <li>
-                <input type="radio" name="sorting-item" class="visually-hidden" checked>
-                По возрастванию
+                <label>
+                  <input type="radio" name="sorting-item" class="visually-hidden" checked>
+                  По возрастванию
+                </label>
               </li>
               <li>
-                <input type="radio" name="sorting-item" class="visually-hidden">
-                По убыванию
+                <label>
+                  <input type="radio" name="sorting-item" class="visually-hidden">
+                  По убыванию
+                </label>
               </li>
             </ul>
           </fieldset>
@@ -132,10 +140,10 @@
 
         <div class="hotel">
           <div class="hotel__photo">
-            <img src="img/amara-hotel.jpg" width="135" height="90" alt="Отель Amara">
+            <img src="img/hotel-amara.jpg" width="135" height="90" alt="Отель Amara">
           </div>
           <div class="hotel__description">
-            <h3 class="title">Amara Resort & Spa</h3>
+            <h3 class="title title--height">Amara Resort & Spa</h3>
             <p>Гостиница</p>
             <p>от 4000 Р.</p>
             <a class="button" href="#">Подробнее</a>
@@ -149,10 +157,10 @@
 
         <div class="hotel">
           <div class="hotel__photo">
-            <img src="img/desert-hotel.jpg" width="135" height="90" alt="Отель Amara">
+            <img src="img/hotel-desert.jpg" width="135" height="90" alt="Отель Amara">
           </div>
           <div class="hotel__description">
-            <h3 class="title">Desert Quail Inn</h3>
+            <h3 class="title title--height">Desert Quail Inn</h3>
             <p>Мотель</p>
             <p>от 3000 Р.</p>
             <a class="button" href="#">Подробнее</a>
@@ -166,10 +174,10 @@
 
         <div class="hotel">
           <div class="hotel__photo">
-            <img src="img/villas-hotel.jpg" width="135" height="90" alt="Отель Amara">
+            <img src="img/hotel-villas.jpg" width="135" height="90" alt="Отель Amara">
           </div>
           <div class="hotel__description">
-            <h3 class="title">Villas At Poco Diablo</h3>
+            <h3 class="title title--height">Villas At Poco Diablo</h3>
             <p>Апартаменты</p>
             <p>от 2000 Р.</p>
             <a class="button" href="#">Подробнее</a>
@@ -187,7 +195,7 @@
     <footer class="page-footer">
 
       <div class="footer__teg">
-        <b>#visitsedona</b>
+        <b class="title title--height">#visitsedona</b>
       </div>
 
       <div class="footer__social">
@@ -198,7 +206,7 @@
 
       <div class="footer__copyright">
         <p>website by</p>
-        <img src="img/copyright.svg" width="115" height="41" alt="Логотип автора">
+        <img src="img/logo-copyright.svg" width="115" height="41" alt="Логотип автора">
       </div>
 
     </footer>
