@@ -119,16 +119,12 @@
           <fieldset class="sorting__change">
             <ul>
               <li>
-                <label>
-                  <input type="radio" name="sorting-item" class="visually-hidden" checked>
-                  По возрастванию
-                </label>
+                <input type="radio" name="sorting-item" class="visually-hidden" id="increase" checked>
+                <label class="visually-hidden" for="increase">По возрастванию</label>
               </li>
               <li>
-                <label>
-                  <input type="radio" name="sorting-item" class="visually-hidden">
-                  По убыванию
-                </label>
+                <input type="radio" name="sorting-item" class="visually-hidden" id="decrease">
+                <label class="visually-hidden" for="decrease">По убыванию</label>
               </li>
             </ul>
           </fieldset>
@@ -206,7 +202,9 @@
 
       <div class="footer__copyright">
         <p>website by</p>
-        <img src="img/logo-copyright.svg" width="115" height="41" alt="Логотип автора">
+        <a href="https://htmlacademy.ru/">
+          <img src="img/logo-copyright.svg" width="115" height="41" alt="Логотип автора">
+        </a>
       </div>
 
     </footer>

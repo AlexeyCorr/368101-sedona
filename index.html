@@ -107,7 +107,9 @@
 
       <section class="map">
         <h2 class="visually-hidden">Как до нас добраться</h2>
-        <img src="img/map.jpg" width="1200" height="593" alt="Карта">
+        <p>
+          <img src="img/map.jpg" width="1200" height="593" alt="Карта">
+        </p>
       </section>
 
     </main>
@@ -126,7 +128,9 @@
 
         <div class="footer__copyright">
           <p>website by</p>
-          <img src="img/logo-copyright.svg" width="115" height="41" alt="Логотип автора">
+          <a href="https://htmlacademy.ru/">
+            <img src="img/logo-copyright.svg" width="115" height="41" alt="Логотип автора">
+          </a>
         </div>
 
       </footer>
@@ -139,22 +143,24 @@
           <label class="popup-form__label" for="date-in">Дата заезда:</label>
           <input class="popup-form__field" type="text" name="date-in" placeholder="24 апреля 2017" id="date-in">
           <button type="button" class="popup-form__calendar">Календарь</button>
+        </div>
+        <div class="popup-form__row">
           <label class="popup-form__label" for="date-out">Дата выезда:</label>
           <input class="popup-form__field" type="text" name="date-out" placeholder="4 июля 2017" id="date-out">
-          <button type="button" class="popup-form__calendar">Календарь</button>
+          <button class="popup-form__calendar" type="button">Календарь</button>
         </div>
         <div class="popup-form__col">
           <label class="popup-form__label" for="adult">Взрослые:</label>
             <div class="number">
-              <button class="number__btn namber__btn--minus">Минус</button>
+              <button class="number__btn namber__btn--minus" type="button">Минус</button>
               <input class="number__fiald" type="text" id="adult" placeholder="2">
-              <button class="number__btn namber__btn--plus">Плюс</button>
+              <button class="number__btn namber__btn--plus" type="button">Плюс</button>
             </div>
             <label class="popup-form__label" for="child">Дети:</label>
               <div class="number">
-                <button class="number__btn namber__btn--minus">Минус</button>
+                <button class="number__btn namber__btn--minus" type="button">Минус</button>
                 <input class="number__fiald" type="text" id="child" placeholder="0">
-                <button class="number__btn namber__btn--plus">Плюс</button>
+                <button class="number__btn namber__btn--plus" type="button">Плюс</button>
               </div>
           <button class="button" type="submit">Найти</button>
       </form>
