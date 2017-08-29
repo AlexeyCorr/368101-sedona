@@ -7,7 +7,7 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-page">
     <div class="container">
       <header class="page-header">
 
@@ -34,8 +34,9 @@
       <section class="filter">
         <h2 class="visually-hidden">Фильтры услуг</h2>
 
-        <form method="get" action="#">
+        <form class="filter__form" method="get" action="#">
 
+          <div class="filter__wrapper filter__wrapper--col">
           <fieldset class="filter__col">
             <legend class="filter__type">Инфраструктура:</legend>
             <ul class="filter__list">
@@ -71,8 +72,10 @@
               </li>
             </ul>
           </fieldset>
+          </div>
 
-          <fieldset>
+          <div class="filter__wrapper">
+          <fieldset class="filter__cost">
             <legend class="filter__type">Стоимость в сутки (р):</legend>
             <div class="range">
               <div class="range__fields">
@@ -91,8 +94,10 @@
                 </div>
               </div>
             </div>
+
           </fieldset>
           <button class="button button--transparent" type="submit">Показать</button>
+          </div>
 
         </form>
 
@@ -100,15 +105,27 @@
 
       <section class="sorting">
         <h2 class="visually-hidden">Сортировка отелей</h2>
-          <div class="sorting__sum">Найдено: 3</div>
-          <ul class="sorting__list">
-            <li class="sorting__title">Сортировка:</li>
-            <li class="sorting__item"><a href="#" class="sorting__link sorting__link--active">По цене</a></li>
-            <li class="sorting__item"><a href="#" class="sorting__link">По типу</a></li>
-            <li class="sorting__item"><a href="#" class="sorting__link">По рейтингу</a></li>
-            <li class="sorting__item"><a href="#" class="sorting__triangel">По возрастанию</a></li>
-            <li class="sorting__item"><a href="#" class="sorting__triangel sorting__triangel--active">По убыванию</a></li>
-          </ul>
+        <ul class="sorting__list">
+          <li class="sorting__sum">Найдено: 3</li>
+          <li class="sorting__title">Сортировка:</li>
+          <li class="sorting__item">
+            <a href="#" class="sorting__link sorting__link--active">По цене</a>
+          </li>
+          <li class="sorting__item">
+            <a href="#" class="sorting__link">По типу</a>
+          </li>
+          <li class="sorting__item">
+            <a href="#" class="sorting__link">По рейтингу</a>
+          </li>
+        </ul>
+        <ul class="sorting__change">
+          <li>
+            <a href="#" class="sorting__triangel">По возрастанию</a>
+          </li>
+          <li>
+            <a href="#" class="sorting__triangel sorting__triangel--active">По убыванию</a>
+          </li>
+        </ul>
       </section>
 
       <section class="hotels">
@@ -169,16 +186,22 @@
     </main>
 
     <div class="container">
-      <footer class="page-footer__hotel">
+      <footer class="page-footer">
 
         <div class="footer__teg">
           <b class="title title--height">#visitsedona</b>
         </div>
 
         <div class="footer__social">
-          <a class="social__button social__button--tw" href="#">Твиттер</a>
-          <a class="social__button social__button--fb" href="#">Файсбук</a>
-          <a class="social__button social__button--yt" href="#">Ютуб</a>
+          <a class="social__button social__button--tw" href="#"><span class="visually-hidden">Твиттер</span>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15"><image overflow="visible" width="17" height="15" xlink:href="t.png"/><path fill="#FFF" d="M10.95.144c1.685-.496 2.984.27 3.577 1.18.673-.232 1.33-.482 2.01-.71-.003.862-.52 1.514-.856 1.77.686.17 1.305-.492 1.305-.492-.17 1-1.006 1.788-1.563 2.024-.23 6.75-3.175 11.217-10.077 11.082H4.9c-.41 0-4.165-.46-4.9-1.887 2.272.197 3.894-.42 4.694-1.176-.96-.3-2.68-.477-2.98-2.95.35.106.565.228 1.19.12C1.705 8.246.375 7.53.45 5.33c.285.328 1.067.536 1.34.472-.703-.24-1.97-3.36-.894-4.952C2.712 2.704 4.63 4.456 8.046 4.623 8.254 2.33 9.183.793 10.95.143z"/></svg>
+          </a>
+          <a class="social__button social__button--fb" href="#"><span class="visually-hidden">Файсбук</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22"><path fill="#FFF" d="M12 4V0H8C5.79 0 4 1.79 4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/></svg>
+          </a>
+          <a class="social__button social__button--yt" href="#"><span class="visually-hidden">Ютуб</span>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16"><image overflow="visible" width="20" height="16" xlink:href="youtube.png"/><path fill="#FFF" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/></svg>
+          </a>
         </div>
 
         <div class="footer__copyright">
