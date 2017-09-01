@@ -605,9 +605,9 @@ input[type="radio"].visually-hidden {
 
   background-color: #81b3d2;
   background-image: url("../img/bg-filter.jpg");
-  background-position: 50% 20%;
+  background-position: 50% 15%;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
 }
 
 .filter fieldset {
