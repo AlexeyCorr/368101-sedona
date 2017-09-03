@@ -110,10 +110,12 @@ input[type="radio"].visually-hidden {
 .button--blue:hover,
 .button--blue:focus {
   background-color: #669ec0;
+
+  cursor: pointer;
 }
 
-.batton--blue:active {
-  color: #94b9d2;
+.button--blue:active {
+  color: rgba(255, 255, 255, 0.3);
 
   background-color: #5496bd;
 }
@@ -125,10 +127,12 @@ input[type="radio"].visually-hidden {
 .button--brown:hover,
 .button--brown:focus {
   background-color: #604e43;
+
+  cursor: pointer;
 }
 
-.batton--brown:active {
-  color: #928a85;
+.button--brown:active {
+  color: rgba(255, 255, 255, 0.3);
 
   background-color: #503e33;
 }
@@ -180,6 +184,12 @@ input[type="radio"].visually-hidden {
   color: #81b3d2;
 }
 
+.menu__link:focus {
+  border-color: #81b3d2;
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 .menu__link:active,
 .menu__link--active {
   color: #766357;
@@ -206,7 +216,7 @@ input[type="radio"].visually-hidden {
   padding-top: 76px;
   padding-bottom: 75px;
 
-  background-color: #ffffff;
+  background-color: #f2f2f2;
   background-image: url("../img/bg-bottom.png"), url("../img/bg-top.jpg");
   background-position: bottom center, 50% 20%;
   background-repeat: no-repeat;
@@ -509,6 +519,10 @@ input[type="radio"].visually-hidden {
   fill: #000000;
 }
 
+.popup-form__calendar:hover {
+  cursor: pointer;
+}
+
 .popup-form__calendar:active path {
   fill: #81b3d2;
 }
@@ -598,6 +612,10 @@ input[type="radio"].visually-hidden {
   stroke: #000000;
 }
 
+.number__btn:hover {
+  cursor: pointer;
+}
+
 .number__btn:active line {
   stroke: #81b3d2;
 }
@@ -644,8 +662,8 @@ input[type="radio"].visually-hidden {
   left: 0;
   position: absolute;
 
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
 
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
@@ -756,7 +774,7 @@ input[type="radio"].visually-hidden {
 
   font-size: 14px;
   line-height: 21px;
-  vertical-align: bottom;
+  vertical-align: top;
   text-align: center;
 
   cursor: pointer;
@@ -845,6 +863,7 @@ input[type="radio"].visually-hidden {
   color: #000000;
 
   background-color: #ffffff;
+  cursor: pointer;
 }
 
 .sorting {
@@ -1035,6 +1054,7 @@ input[type="radio"].visually-hidden {
 
   font-size: 14px;
   line-height: 21px;
+  vertical-align: top;
 }
 
 .hotel__rating {
