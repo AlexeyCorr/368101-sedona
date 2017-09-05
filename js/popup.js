@@ -9,6 +9,8 @@ var btnPlus2 = popup.querySelector(".number__btn--plus-2");
 var btnMinus2 = popup.querySelector(".number__btn--minus-2");
 var amountAdult = popup.querySelector("[name=adult]");
 var amountChild = popup.querySelector("[name=child]");
+var storageAdult = localStorage.getItem("amountAdult");
+var storageChild = localStorage.getItem("amountChild");
 
 link.addEventListener("click", function (evt) {
   evt.preventDefault ();
@@ -16,14 +18,21 @@ link.addEventListener("click", function (evt) {
   popup.classList.toggle("popup--animation");
   popup.classList.remove("popup--error");
   dateIn.focus ();
+  if (storageAdult.value || storageChild.value) {
+    amountAdult.value = storageAdult.value;
+    amountChild.value = storageChild.value;
+  }
 });
 
 form.addEventListener("submit", function (evt) {
-  if (!dateIn.value || !dateOut.value)  {
+  if (!dateIn.value || !dateOut.value || !amountAdult.value || !amountChild.value)  {
     evt.preventDefault ();
     popup.classList.remove("popup--error");
     popup.offsetWidth = popup.offsetWidth;
     popup.classList.toggle("popup--error");
+  } else {
+    localStorage.setItem("amountAdult", amountAdult.value);
+    localStorage.setItem("amountChild", amountChild.value);
   }
 });
 
