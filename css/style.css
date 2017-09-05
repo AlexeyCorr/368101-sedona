@@ -418,7 +418,41 @@ input[type="radio"].visually-hidden {
           justify-content: center;
 }
 
+@keyframes emersion {
+  0% {
+    transform: translateX(-2000px);
+  }
+
+  100% {
+    transform: translateX(-284px);
+  }
+}
+
+@keyframes error {
+  0%,
+  100% {
+    transform: translateX(-284px);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-264px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(-304px);
+  }
+}
+
 .popup {
+  display: none;
+
   position: absolute;
   top: 0;
   left: 50%;
@@ -427,8 +461,23 @@ input[type="radio"].visually-hidden {
           transform: translateX(-50%);
   width: 568px;
   height: 395px;
+  z-index: 3;
 
   background-color: #ffffff;
+}
+
+.popup--visibility {
+  display: block;
+
+  animation-name: emersion;
+  animation-duration: 0.6s;
+  animation-timing-function: ease;
+}
+
+.popup--error {
+  animation-name: error;
+  animation-duration: 0.6s;
+  animation-timing-function: ease;
 }
 
 .popup-form {
@@ -630,7 +679,16 @@ input[type="radio"].visually-hidden {
   line-height: 26px;
 }
 
+.map--top {
+  position: absolute;
+  top: 0;
+  left: center;
+  z-index: 1;
+}
+
 .map p {
+  position: relative;
+
   margin: 0;
   padding: 0;
 }
@@ -1121,6 +1179,7 @@ input[type="radio"].visually-hidden {
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: 2;
 
   background-color: rgba(249, 251, 246, 0.9);
 }
