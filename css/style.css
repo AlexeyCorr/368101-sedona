@@ -254,7 +254,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-height: 256px;
+  height: 256px;
   width: 100%;
 }
 
@@ -301,7 +301,7 @@ input[type="radio"].visually-hidden {
 }
 
 .advantage__photo--bottom img {
-  top: -71px;
+  top: -68px;
 }
 
 .advantage--blue {
@@ -418,20 +418,35 @@ input[type="radio"].visually-hidden {
           justify-content: center;
 }
 
-@keyframes emersion {
+@-webkit-keyframes emersion {
   0% {
-    transform: translateX(-2000px);
+    -webkit-transform: translateX(-2000px);
+            transform: translateX(-2000px);
   }
 
   100% {
-    transform: translateX(-284px);
+    -webkit-transform: translateX(-284px);
+            transform: translateX(-284px);
   }
 }
 
-@keyframes error {
+@keyframes emersion {
+  0% {
+    -webkit-transform: translateX(-2000px);
+            transform: translateX(-2000px);
+  }
+
+  100% {
+    -webkit-transform: translateX(-284px);
+            transform: translateX(-284px);
+  }
+}
+
+@-webkit-keyframes error {
   0%,
   100% {
-    transform: translateX(-284px);
+    -webkit-transform: translateX(-284px);
+            transform: translateX(-284px);
   }
 
   10%,
@@ -439,14 +454,41 @@ input[type="radio"].visually-hidden {
   50%,
   70%,
   90% {
-    transform: translateX(-264px);
+    -webkit-transform: translateX(-264px);
+            transform: translateX(-264px);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(-304px);
+    -webkit-transform: translateX(-304px);
+            transform: translateX(-304px);
+  }
+}
+
+@keyframes error {
+  0%,
+  100% {
+    -webkit-transform: translateX(-284px);
+            transform: translateX(-284px);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-264px);
+            transform: translateX(-264px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(-304px);
+            transform: translateX(-304px);
   }
 }
 
@@ -469,15 +511,22 @@ input[type="radio"].visually-hidden {
 .popup--visibility {
   display: block;
 
-  animation-name: emersion;
-  animation-duration: 0.6s;
-  animation-timing-function: ease;
+  -webkit-animation-name: emersion;
+
+          animation-name: emersion;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
 }
 
 .popup--error {
-  animation-name: error;
-  animation-duration: 0.6s;
-  animation-timing-function: ease;
+  -webkit-animation-name: error;
+          animation-name: error;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
 }
 
 .popup-form {
@@ -678,17 +727,21 @@ input[type="radio"].visually-hidden {
   font-size: 21px;
   line-height: 26px;
 }
-
+.map {
+  position: relative;
+}
 .map--top {
   position: absolute;
   top: 0;
-  left: center;
-  z-index: 1;
+  left: 0;
+  z-index: 2;
+  max-width: 100%;
+  height: 100%;
+
+  border: none;
 }
 
 .map p {
-  position: relative;
-
   margin: 0;
   padding: 0;
 }
@@ -1179,7 +1232,7 @@ input[type="radio"].visually-hidden {
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 
   background-color: rgba(249, 251, 246, 0.9);
 }
