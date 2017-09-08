@@ -3,7 +3,7 @@
   src: url("../font/ptsans.woff2") format("woff2"),
        url("../font/ptsans.woff") format("woff");
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   src: url("../font/ptsansbold.woff2") format("woff2"),
        url("../font/ptsansbold.woff") format("woff");
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 body {
@@ -157,7 +157,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0;
+  padding: 0 6%;
   margin: 0;
 
   list-style: none;
@@ -169,7 +169,17 @@ input[type="radio"].visually-hidden {
 }
 
 .menu__item:nth-child(2) {
-  margin-right: 20%;
+  margin-right: 12%;
+}
+
+.menu__item:nth-child(1),
+.menu__item:nth-child(2) {
+  text-align: left;
+}
+
+.menu__item:nth-child(3),
+.menu__item:nth-child(4) {
+  text-align: right;
 }
 
 .menu__link {
@@ -554,7 +564,7 @@ input[type="radio"].visually-hidden {
       -ms-flex-align: center;
           align-items: center;
   width: 460px;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .popup-form__label {
@@ -911,6 +921,7 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+  text-align: left;
 
   background-color: transparent;
   border: none;
